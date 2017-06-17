@@ -5,7 +5,7 @@ $(document).ready(function(){
     $("#gifs-appear-here").empty();
     var cartoon = $(this).attr("data-cartoon");
     // Constructing a queryURL using the cartoon name
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
       cartoon + "&api_key=dc6zaTOxFJmzC&limit=15";
     // create a variable for the cartoons array
     var cartoons = ["The Simpsons", "Bojack Horseman", "Looney Toons", "Mickey Mouse"];
