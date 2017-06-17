@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ryan's Giphy API Page</title>
+	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Muli:900|Pangolin" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.js"
+  	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  	crossorigin="anonymous"></script>
+	<script src="assets/javascript/app.js"></script>
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="page-header">
+  			<h1>Ryan's Giphy API Page: <small>Cartoon Edition</small></h1>
+		</div>
+		<div class="row">
+			<div id="cartoonButtons">
+				<button class="btn btn-default gif" data-state="still" data-cartoon="the simpsons">The Simpsons</button>
+  				<button class="btn btn-default gif" data-cartoon="bojack horseman">Bojack Horseman</button>
+  				<button class="btn btn-default gif" data-state="still" data-cartoon="looney toons">Looney Toons</button>
+  				<button class="btn btn-default gif" data-state="still" data-cartoon="Mickey Mouse">Mickey Mouse</button>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-3 col-sm-3 col-xs-3" id="submissionForm">
+				<form>
+					<div class="form-group">
+					    <label for="cartoonAdd">Add a cartoon button</label>
+					    <input type="text" class="form-control" id="cartoon-input" placeholder="Cartoon">
+				  	</div>
+					<input  id="addCartoon" type="submit" class="btn btn-info"></button>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12" id="gifs-appear-here">
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

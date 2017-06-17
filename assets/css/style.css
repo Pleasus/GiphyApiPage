@@ -1,0 +1,40 @@
+body {
+	background-image: url("../images/cloudy-day.png");
+}
+
+h1 {
+	font-family: 'Muli', sans-serif;
+}
+
+small {
+	font-family: 'Pangolin', cursive;
+}
+
+.container-fluid {
+	margin: 20px;
+	padding-bottom: 20px;
+	background: rgba(255,255,255, .5);
+}
+
+.page-header {
+	color: lightseagreen;
+	border-bottom: 1px solid grey;
+}
+
+#cartoonButtons {
+	margin-left: 15px;
+}
+
+#addCartoon {
+	background-color: maroon;
+	border-color: lightseagreen;
+}
+
+.imageBlock {
+	float: left;
+	margin: 10px;
+}
+
+label {
+	color: maroon;
+}
