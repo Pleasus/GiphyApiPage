@@ -75,13 +75,14 @@ $(document).ready(function(){
   });
   
   $(document).on("click","#cartoonButtons",function() {
-    // code that animates when clicked if not animated, and vice versa
-          if (state === "still") {
-            $(this).attr("src", $(this).attr("data-animate"));
-            $(this).attr("data-state", "animate");
-          } else {
-            $(this).attr("src", $(this).attr("data-still"));
-            $(this).attr("data-state", "still");
-          }
+        var state = $(this).attr("data-state");
+        // code that animates when clicked if not animated, and vice versa
+        if (state === "still") {
+          $(this).attr("src", $(this).attr("data-animate"));
+          $(this).attr("data-state", "animate");
+        } else {
+          $(this).attr("src", $(this).attr("data-still"));
+          $(this).attr("data-state", "still");
+        }
   });
 });
