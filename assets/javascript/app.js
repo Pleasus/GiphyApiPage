@@ -44,7 +44,7 @@ $(document).ready(function(){
       });
       
       function renderButtons() {
-        // Deleting the movies prior to adding new cartoons
+        // Deleting the catroons prior to adding new cartoons
         // (this is necessary otherwise you will have repeat buttons)
         $("#cartoonButtons").empty();
         // Looping through the array of movies
@@ -67,7 +67,7 @@ $(document).ready(function(){
         event.preventDefault();
         // This line grabs the input from the textbox
         var cartoonText = $("#cartoon-input").val().trim();
-        // Adding movie from the textbox to our array
+        // Adding cartoon from the textbox to our array
         cartoons.push(cartoonText);
         // Calling renderButtons which handles the processing of our movie array
         renderButtons();
