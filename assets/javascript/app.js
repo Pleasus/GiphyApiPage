@@ -44,12 +44,12 @@ $(document).ready(function(){
       });
       
       function renderButtons() {
-        // Deleting the movies prior to adding new movies
+        // Deleting the movies prior to adding new cartoons
         // (this is necessary otherwise you will have repeat buttons)
         $("#cartoonButtons").empty();
         // Looping through the array of movies
         for (var i = 0; i < cartoons.length; i++) {
-          // Then dynamicaly generating buttons for each movie in the array
+          // Then dynamicaly generating buttons for each cartoon in the array
           // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
           var a = $("<button>");
           // Adding a class of gif to our button
