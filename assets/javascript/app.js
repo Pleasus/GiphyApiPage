@@ -74,7 +74,7 @@ $(document).ready(function(){
       });
   });
   
-  $(document).on("click","#cartoonButtons",function() {
+  $(document).on("click","<img>",function() {
         var state = $(this).attr("data-state");
         // code that animates when clicked if not animated, and vice versa
         if (state === "still") {
