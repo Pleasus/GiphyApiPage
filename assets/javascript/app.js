@@ -36,14 +36,7 @@ $(document).ready(function(){
           cartoonDiv.addClass("imageBlock");
           cartoonDiv.append(cartoonImage);
           cartoonDiv.append(p);
-          // code that animates when clicked if not animated, and vice versa
-          if (state === "still") {
-            $(this).attr("src", $(this).attr("data-animate"));
-            $(this).attr("data-state", "animate");
-          } else {
-            $(this).attr("src", $(this).attr("data-still"));
-            $(this).attr("data-state", "still");
-          }
+          
           // Prependng the cartoonDiv to the HTML page in the "#gifs-appear-here" div
           $("#gifs-appear-here").prepend(cartoonDiv);
         }
@@ -64,7 +57,7 @@ $(document).ready(function(){
           // Adding a data-attribute
           a.attr("data-cartoon", cartoons[i]);
           // Providing the initial button text
-          a.text(cartoon[i]);
+          a.text(cartoons[i]);
           // Adding the button to the buttons-view div
           $("#cartoonButtons").append(a);
         }
@@ -79,5 +72,16 @@ $(document).ready(function(){
         // Calling renderButtons which handles the processing of our movie array
         renderButtons();
       });
+  });
+  
+  $(document).on("click","#cartoonButtons",function() {
+    // code that animates when clicked if not animated, and vice versa
+          if (state === "still") {
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-state", "animate");
+          } else {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still");
+          }
   });
 });
