@@ -1,6 +1,6 @@
 $(document).ready(function(){
   console.log("jscript ready");
-  $(".gif").on("click", function() {
+  $(document).on("click", ".gif", function() {
     // Grabbing and storing the data-cartoon property value from the button
     $("#gifs-appear-here").empty();
     var cartoon = $(this).attr("data-cartoon");
@@ -31,8 +31,13 @@ $(document).ready(function(){
           // Creating and storing an image tag
           var cartoonImage = $("<img>");
           // Setting the src attribute of the image to a property pulled off the result item
-          cartoonImage.attr("src", results[i].images.fixed_height.url);
+          cartoonImage.attr("src", results[i].images.fixed_height_still.url);
+          cartoonImage.attr("data-state", "still");
+          cartoonImage.attr("still-img", results[i].images.fixed_height_still.url);
+          cartoonImage.attr("animated-img", results[i].images.fixed_height.url);
+
           // Appending the paragraph and image tag to the cartoonDiv
+          cartoonImage.addClass("toons");
           cartoonDiv.addClass("imageBlock");
           cartoonDiv.append(cartoonImage);
           cartoonDiv.append(p);
@@ -63,7 +68,7 @@ $(document).ready(function(){
         }
       }
 
-      $("#addCartoon").on("click", function(event) {
+      $(document).on("click", "#addCartoon", function(event) {
         event.preventDefault();
         // This line grabs the input from the textbox
         var cartoonText = $("#cartoon-input").val().trim();
@@ -74,14 +79,16 @@ $(document).ready(function(){
       });
   });
   
-  $(document).on("click","<img>",function() {
+  $(document).on("click","img",function() {
         var state = $(this).attr("data-state");
         // code that animates when clicked if not animated, and vice versa
+        console.log("button click works.");
+
         if (state === "still") {
-          $(this).attr("src", $(this).attr("data-animate"));
+          $(this).attr("src", $(this).attr("animated-img"));
           $(this).attr("data-state", "animate");
         } else {
-          $(this).attr("src", $(this).attr("data-still"));
+          $(this).attr("src", $(this).attr("still-img"));
           $(this).attr("data-state", "still");
         }
   });
